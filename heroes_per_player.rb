@@ -1,5 +1,6 @@
 class HeroesPerPlayer
   attr_accessor :number
+  MAXIMUM = 30.freeze
 
   def initialize(number)
     raise ArgumentError, 'Must be a number' unless number.is_a? Numeric 

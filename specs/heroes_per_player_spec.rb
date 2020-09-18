@@ -37,4 +37,10 @@ RSpec.describe HeroesPerPlayer do
       expect(subject.number).to be_kind_of Numeric
     end
   end
+
+  describe 'MAXIMUM' do
+    it 'returns a numeric' do
+      expect(HeroesPerPlayer::MAXIMUM).to be_kind_of Numeric
+    end
+  end
 end
