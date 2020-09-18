@@ -29,6 +29,16 @@ RSpec.describe HeroesPerPlayer do
         }.to raise_error(ArgumentError)
       end
     end
+
+    context 'raises an HeroesPerPlayer::ExceededError' do
+      it 'when number of heroes exceeds maximum' do
+        exceeded_value = HeroesPerPlayer::MAXIMUM + 1
+
+        expect {
+          heroes_per_player = HeroesPerPlayer.new(exceeded_value) 
+        }.to raise_error(HeroesPerPlayer::ExceededError)
+      end
+    end
   end
 
   describe 'self.number' do
