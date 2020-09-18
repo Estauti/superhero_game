@@ -31,10 +31,10 @@ RSpec.describe HeroesPerPlayer do
     end
   end
 
-  #describe 'self.number' do
-   # subject { HeroesPerPlayer.new(5) }
-    #it 'returns a number' do
-    #  expect(subject.number).to be_kind_of Numeric
-    #end
-  #end
+  describe 'self.number' do
+    subject { HeroesPerPlayer.new(5) }
+    it 'returns a number' do
+      expect(subject.number).to be_kind_of Numeric
+    end
+  end
 end
