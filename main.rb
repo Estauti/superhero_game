@@ -1,0 +1,1 @@
+p "Welcome to the Superheroe game!"
