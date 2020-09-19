@@ -1,4 +1,4 @@
-require "./heroes_per_player"
+require "./lib/heroes_per_player"
 
 p "Welcome to the Superheroe game!"
 

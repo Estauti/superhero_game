@@ -1,4 +1,4 @@
-require "./heroes_per_player"
+require "./lib/heroes_per_player"
 
 RSpec.describe HeroesPerPlayer do
   describe 'instantiation' do
