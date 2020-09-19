@@ -16,4 +16,10 @@ RSpec.describe HeroesSlicer do
       }.to raise_error(ArgumentError)
     end
   end
+
+  context 'LAST_HERO_ID' do
+    it 'returns an integer' do
+      expect(HeroesSlicer::LAST_HERO_ID).to be_kind_of(Integer)
+    end
+  end
 end
