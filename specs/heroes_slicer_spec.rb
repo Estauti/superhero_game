@@ -35,4 +35,24 @@ RSpec.describe HeroesSlicer do
       expect(available_hero_ids.length).to eq(total_hero_ids)
     end
   end
+
+  context 'slice()' do
+    let(:heroes_slicer) { HeroesSlicer.new(5) }
+
+    it 'returns an array' do
+      expect(heroes_slicer.slice).to be_kind_of(Array)      
+    end
+
+    it 'returns an array of integers' do
+      sliced_heroe_ids = heroes_slicer.slice
+
+      expect(sliced_heroe_ids[0]).to be_kind_of(Integer)
+    end
+
+    it 'removes sliced hero ids from available hero ids' do
+      sliced_heroe_ids = heroes_slicer.slice
+
+      expect(heroes_slicer.available_hero_ids).not_to include(*sliced_heroe_ids)
+    end
+  end
 end
