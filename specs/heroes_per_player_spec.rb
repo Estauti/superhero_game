@@ -22,12 +22,6 @@ RSpec.describe HeroesPerPlayer do
           heroes_per_player = HeroesPerPlayer.new(-5) 
         }.to raise_error(ArgumentError)
       end
-
-      it 'with a floating number' do
-        expect {
-          heroes_per_player = HeroesPerPlayer.new(1.5) 
-        }.to raise_error(ArgumentError)
-      end
     end
 
     context 'raises an HeroesPerPlayer::ExceededError' do
